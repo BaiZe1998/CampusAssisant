@@ -9,4 +9,6 @@
         <item name="android:listDivider">@drawable/line_divider</item>
     </style>
 
+    <style name="CollegeActivityTheme" parent="AppTheme"></style>
+
 </resources>
