@@ -1,17 +1,16 @@
 package com.android.assistant.ui.dashboard;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,6 +18,7 @@ import com.android.assistant.College;
 import com.android.assistant.CollegeAdapter;
 import com.android.assistant.R;
 import com.android.assistant.SimpleDividerItemDecoration;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,8 +26,12 @@ import java.util.List;
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
+    private BottomNavigationView bottomNavigationView;
     private List<College> collegeList = new ArrayList<>();
+    private int scrollY;
+    Boolean isBottom;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         dashboardViewModel =
@@ -42,13 +46,55 @@ public class DashboardFragment extends Fragment {
         CollegeAdapter adapter = new CollegeAdapter(collegeList);
         recyclerView.setAdapter(adapter);
 
-        //       final TextView textView = root.findViewById(R.id.text_dashboard);
-//        dashboardViewModel.getText().observe(this, new Observer<String>() {
+        /**
+         * 底部导航栏的显示与隐藏
+         */
+        bottomNavigationView = getActivity().findViewById(R.id.nav_view);
+        isBottom = true;
+//        recyclerView.setOnScrollChangeListener(new RecyclerView.OnScrollChangeListener() {
 //            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
+//            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+//                //上划 并且正在显示底部导航
+//                if(scrollY - oldScrollY > 0 && isBottom){
+//                    isBottom = false;
+//                    //将y属性变为底部栏高度 相当于隐藏了
+//                    bottomNavigationView.animate().translationY(bottomNavigationView.getHeight());
+//                }else if(scrollY - oldScrollY < 0 && !isBottom){
+//                    isBottom = true;
+//                    bottomNavigationView.animate().translationY(0);
+//                }
 //            }
 //        });
+        scrollY = 0;
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            /**
+             * 关于滑动部分尚且存在理解上的问题
+             * @param recyclerView
+             * @param dx
+             * @param dy
+             */
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                scrollY += dy;
+
+                if(scrollY - bottomNavigationView.getHeight() > 0 && isBottom){
+                    isBottom = false;
+                    bottomNavigationView.animate().translationY(bottomNavigationView.getHeight());
+                    Log.i("测试1", "onScrolled: " + scrollY);
+                }else if(scrollY - bottomNavigationView.getHeight() <= 0 && !isBottom){
+                    isBottom = true;
+                    bottomNavigationView.animate().translationY(0);
+                    Log.i("测试2", "onScrolled: " + scrollY);
+                }
+                Log.i("测试", "onScrolled: " + bottomNavigationView.getHeight());
+            }
+        });
         return root;
     }
 
