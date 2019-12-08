@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">校园助手</string>
+    <string name="title_find">发现</string>
+    <string name="title_sign">报到</string>
+    <string name="title_college">学院</string>
+    <string name="title_map">位置</string>
+    <string name="title_info">更多</string>
+</resources>
