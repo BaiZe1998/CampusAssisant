@@ -1,5 +1,7 @@
 package com.android.assistant.ui.dashboard;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,6 +48,7 @@ public class DashboardFragment extends Fragment {
         CollegeAdapter adapter = new CollegeAdapter(collegeList);
         recyclerView.setAdapter(adapter);
 
+
         /**
          * 底部导航栏的显示与隐藏
          */
@@ -85,6 +88,7 @@ public class DashboardFragment extends Fragment {
 
                 if(scrollY - bottomNavigationView.getHeight() > 0 && isBottom){
                     isBottom = false;
+                    //将y属性变为底部栏高度 相当于隐藏了
                     bottomNavigationView.animate().translationY(bottomNavigationView.getHeight());
                     Log.i("测试1", "onScrolled: " + scrollY);
                 }else if(scrollY - bottomNavigationView.getHeight() <= 0 && !isBottom){

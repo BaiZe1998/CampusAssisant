@@ -1,5 +1,8 @@
 package com.android.assistant;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +20,39 @@ public class CollegeAdapter extends RecyclerView.Adapter<CollegeAdapter.ViewHold
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.college_item, parent, false);
-        ViewHolder holder = new ViewHolder(view);
+        final ViewHolder holder = new ViewHolder(view);
+        holder.collegeName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = holder.getAdapterPosition();
+                College college = mCollegeList.get(position);
+                String collegeName = college.getName();
+                int collegeImageId = college.getImageId();
+                SharedPreferences preferences = parent.getContext().getSharedPreferences("data", Context.MODE_PRIVATE);
+                String imageId = preferences.getString(collegeName, "");
+                Intent intent = new Intent(parent.getContext(), CollegeActivity.class);
+                intent.putExtra(CollegeActivity.COLLEGE_NAME, collegeName);
+                intent.putExtra(CollegeActivity.COLLEGE_IMAGE_ID, imageId);
+//                intent.putExtra(CollegeActivity.COLLEGE_IMAGE_ID, collegeImageId);
+                parent.getContext().startActivity(intent);
+            }
+        });
+        holder.collegeImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = holder.getAdapterPosition();
+                College college = mCollegeList.get(position);
+                String collegeName = college.getName();
+                SharedPreferences preferences = parent.getContext().getSharedPreferences("data", Context.MODE_PRIVATE);
+                String imageId = preferences.getString(collegeName, "");
+                Intent intent = new Intent(parent.getContext(), CollegeActivity.class);
+                intent.putExtra(CollegeActivity.COLLEGE_NAME, collegeName);
+                intent.putExtra(CollegeActivity.COLLEGE_IMAGE_ID, "R.id." + imageId);
+                parent.getContext().startActivity(intent);
+            }
+        });
         return holder;
     }
 

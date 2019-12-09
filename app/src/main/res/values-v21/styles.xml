@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="CollegeActivityTheme2" parent="AppTheme">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
     <style name="CollegeActivityTheme" parent="AppTheme">
         <item name="android:statusBarColor">@color/colorPrimary</item>
     </style>
