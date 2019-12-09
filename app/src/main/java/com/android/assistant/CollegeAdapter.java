@@ -49,7 +49,7 @@ public class CollegeAdapter extends RecyclerView.Adapter<CollegeAdapter.ViewHold
                 String imageId = preferences.getString(collegeName, "");
                 Intent intent = new Intent(parent.getContext(), CollegeActivity.class);
                 intent.putExtra(CollegeActivity.COLLEGE_NAME, collegeName);
-                intent.putExtra(CollegeActivity.COLLEGE_IMAGE_ID, "R.id." + imageId);
+                intent.putExtra(CollegeActivity.COLLEGE_IMAGE_ID, imageId);
                 parent.getContext().startActivity(intent);
             }
         });
