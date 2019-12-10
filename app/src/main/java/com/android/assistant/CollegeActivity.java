@@ -28,6 +28,7 @@ public class CollegeActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String collegeName = intent.getStringExtra(COLLEGE_NAME);
         String collegeImageId = intent.getStringExtra(COLLEGE_IMAGE_ID);
+        String collegeContent = intent.getStringExtra("学院介绍");
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout)findViewById(R.id.collapsing_toolbar);
         ImageView collegeImageView = (ImageView)findViewById(R.id.college_image_view);
@@ -42,7 +43,6 @@ public class CollegeActivity extends AppCompatActivity {
         Log.i("图片id", "onCreate: " + imageId);
         collapsingToolbarLayout.setTitle(collegeName);
         Glide.with(this).load(imageId).into(collegeImageView);
-        String collegeContent = generateCollegeContent(collegeName);
         collegeContentText.setText(collegeContent);
     }
 

@@ -32,9 +32,11 @@ public class CollegeAdapter extends RecyclerView.Adapter<CollegeAdapter.ViewHold
                 int collegeImageId = college.getImageId();
                 SharedPreferences preferences = parent.getContext().getSharedPreferences("data", Context.MODE_PRIVATE);
                 String imageId = preferences.getString(collegeName, "");
+                String collegeContent = preferences.getString(collegeName + "介绍", "");
                 Intent intent = new Intent(parent.getContext(), CollegeActivity.class);
                 intent.putExtra(CollegeActivity.COLLEGE_NAME, collegeName);
                 intent.putExtra(CollegeActivity.COLLEGE_IMAGE_ID, imageId);
+                intent.putExtra("学院介绍", collegeContent);
 //                intent.putExtra(CollegeActivity.COLLEGE_IMAGE_ID, collegeImageId);
                 parent.getContext().startActivity(intent);
             }
@@ -45,11 +47,15 @@ public class CollegeAdapter extends RecyclerView.Adapter<CollegeAdapter.ViewHold
                 int position = holder.getAdapterPosition();
                 College college = mCollegeList.get(position);
                 String collegeName = college.getName();
+                int collegeImageId = college.getImageId();
                 SharedPreferences preferences = parent.getContext().getSharedPreferences("data", Context.MODE_PRIVATE);
                 String imageId = preferences.getString(collegeName, "");
+                String collegeContent = preferences.getString(collegeName + "介绍", "");
                 Intent intent = new Intent(parent.getContext(), CollegeActivity.class);
                 intent.putExtra(CollegeActivity.COLLEGE_NAME, collegeName);
                 intent.putExtra(CollegeActivity.COLLEGE_IMAGE_ID, imageId);
+                intent.putExtra("学院介绍", collegeContent);
+//                intent.putExtra(CollegeActivity.COLLEGE_IMAGE_ID, collegeImageId);
                 parent.getContext().startActivity(intent);
             }
         });
