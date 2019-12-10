@@ -103,35 +103,35 @@ public class DashboardFragment extends Fragment {
     }
 
     private void initColleges(){
-        College nengyuan = new College("冶金与能源工程学院", R.drawable.ic_nengyuan_black_24dp);
+        College nengyuan = new College("冶金与能源工程学院", R.drawable.ic_nengyuan);
         collegeList.add(nengyuan);
-        College computer = new College("信息与技术学院", R.drawable.ic_computer_black_24dp);
+        College computer = new College("信息与技术学院", R.drawable.ic_xinxi);
         collegeList.add(computer);
-        College jingji = new College("经济与对外贸易学院", R.drawable.ic_jingji_black_24dp);
+        College jingji = new College("经济与对外贸易学院", R.drawable.ic_jingji);
         collegeList.add(jingji);
-        College jixie = new College("机械与自动化学院", R.drawable.ic_jixie_black_24dp);
+        College jixie = new College("机械与自动化学院", R.drawable.ic_jixie);
         collegeList.add(jixie);
-        College shengming = new College("生命与化工学院", R.drawable.ic_shengming_black_24dp);
+        College shengming = new College("生命与化工学院", R.drawable.ic_shengming);
         collegeList.add(shengming);
-        College shipin = new College("食品与药理学院", R.drawable.ic_shipin_black_24dp);
+        College shipin = new College("食品与药理学院", R.drawable.ic_shipin);
         collegeList.add(shipin);
-        College tance = new College("探测与材料金属", R.drawable.ic_tance_black_24dp);
+        College tance = new College("探测与材料金属", R.drawable.ic_tance);
         collegeList.add(tance);
-        College tiyu = new College("体育与人体健美学院", R.drawable.ic_tiyu_24dp);
+        College tiyu = new College("体育与人体健美学院", R.drawable.ic_tiyu);
         collegeList.add(tiyu);
-        College xinxi = new College("通信与电力工程学院", R.drawable.ic_xinxi_black_24dp);
+        College xinxi = new College("通信与电力工程学院", R.drawable.ic_tongxin);
         collegeList.add(xinxi);
-        College yishu = new College("服装设计与艺术学院", R.drawable.ic_yishu_black_24dp);
+        College yishu = new College("服装设计与艺术学院", R.drawable.ic_fuzhuang);
         collegeList.add(yishu);
-        College yixue = new College("医学与生命安全学院", R.drawable.ic_yixue_black_24dp);
+        College yixue = new College("医学与生命安全学院", R.drawable.ic_yixue);
         collegeList.add(yixue);
-        College yingshi = new College("影视与摄像学院", R.drawable.ic_yingshi_black_24dp);
+        College yingshi = new College("影视与摄像学院", R.drawable.ic_yingshi);
         collegeList.add(yingshi);
-        College shufa = new College("兰亭书法艺术学院", R.drawable.ic_shufa_black_24dp);
+        College shufa = new College("兰亭书法艺术学院", R.drawable.ic_shufa);
         collegeList.add(shufa);
-        College yanjiu = new College("学术与研究学院", R.drawable.ic_yanjiu_black_24dp);
+        College yanjiu = new College("学术与研究学院", R.drawable.ic_xueshu);
         collegeList.add(yanjiu);
-        College jiaotong = new College("社会与交通管理学院", R.drawable.ic_jiaotong_black_24dp);
+        College jiaotong = new College("社会与交通管理学院", R.drawable.ic_jiaotong);
         collegeList.add(jiaotong);
     }
 
