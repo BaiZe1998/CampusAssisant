@@ -25,9 +25,9 @@
 
     <fragment
         android:id="@+id/navigation_map"
-        android:name="com.android.assistant.ui.home.HomeFragment"
+        android:name="com.android.assistant.ui.map.MapFragment"
         android:label="@string/title_map"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_map" />
 
 <!--    <fragment-->
 <!--        android:id="@+id/navigation_notifications"-->
