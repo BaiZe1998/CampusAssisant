@@ -15,12 +15,17 @@ import androidx.lifecycle.ViewModelProviders;
 import com.android.assistant.R;
 import com.baidu.mapapi.CoordType;
 import com.baidu.mapapi.SDKInitializer;
+import com.baidu.mapapi.map.BaiduMap;
+import com.baidu.mapapi.map.MapStatus;
+import com.baidu.mapapi.map.MapStatusUpdate;
+import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 
 public class MapFragment extends Fragment {
 
     private MapViewModel mapViewModel;
     private MapView mMapView = null;
+    private BaiduMap baiduMap;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -30,7 +35,11 @@ public class MapFragment extends Fragment {
 
         //获取地图控件引用
         mMapView = (MapView) root.findViewById(R.id.bmapView);
-
+        // 找到MapView控件，并通过getMap()方法获得BaiduMap类的对象；
+        baiduMap = mMapView.getMap();
+        MapStatus.Builder builder = new MapStatus.Builder();
+        builder.zoom(18.0f);
+        baiduMap.setMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
 
 
 
