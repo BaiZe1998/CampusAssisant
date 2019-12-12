@@ -46,6 +46,11 @@ public class HomeFragment extends Fragment {
         images.add(R.drawable.college7);
         images.add(R.drawable.college8);
         images.add(R.drawable.college9);
+        images.add(R.drawable.college10);
+        images.add(R.drawable.college11);
+        images.add(R.drawable.college12);
+        images.add(R.drawable.college13);
+        images.add(R.drawable.college14);
 
         Banner banner = (Banner) root.findViewById(R.id.banner);
         //设置图片加载器
