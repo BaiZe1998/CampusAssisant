@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <com.android.assistant.ui.home.ObservableScrollView
         android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_width="0dp"
-        android:layout_height="0dp">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -26,21 +29,140 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/t1"
-                android:text="ddddddddd"
-                app:layout_constraintTop_toBottomOf="@id/banner"
-                android:layout_width="match_parent"
-                android:layout_height="500dp"/>
+            <ImageButton
+                android:id="@+id/image1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ic_meishi"
+                app:layout_constraintEnd_toStartOf="@+id/image2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+            <ImageButton
+                android:id="@+id/image2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ic_lvyou"
+                app:layout_constraintEnd_toStartOf="@+id/image3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/image1"
+                app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+            <ImageButton
+                android:id="@+id/image3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ic_huodong"
+                app:layout_constraintEnd_toStartOf="@+id/image4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/image2"
+                app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+            <ImageButton
+                android:id="@+id/image4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ic_shanguang"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/image3"
+                app:layout_constraintTop_toBottomOf="@+id/banner" />
 
             <TextView
-                android:text="ddddddddd"
-                app:layout_constraintTop_toBottomOf="@+id/t1"
+                android:id="@+id/text1"
+                android:layout_width="48dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:text="美食"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/text2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image1" />
+
+            <TextView
+                android:textSize="12sp"
+                android:id="@+id/text2"
+                android:layout_width="48dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:text="周边游"
+                app:layout_constraintEnd_toStartOf="@+id/text3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text1"
+                app:layout_constraintTop_toBottomOf="@+id/image2"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="48dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:text="活动"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/text4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text2"
+                app:layout_constraintTop_toBottomOf="@id/image3"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="48dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:text="闪光墙"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text3"
+                app:layout_constraintTop_toBottomOf="@id/image4"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/line"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"/>
+                android:layout_height="0.1dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text1"
+                android:background="#DCDCDC"/>
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line"
+                app:cardBackgroundColor="#008577">
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
