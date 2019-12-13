@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FoodActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <com.android.assistant.ui.home.ObservableScrollView
+        android:id="@+id/scroll"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                
+                <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:background="@drawable/food7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="16:9"/>
+
+                <TextView
+                    android:id="@+id/card1_text1"
+                    android:gravity="center_vertical"
+                    android:text="早餐首推之水晶小笼"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:layout_width="300dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/image1"
+                    app:layout_constraintLeft_toLeftOf="@id/image1" />
+                <TextView
+                    android:gravity="center_vertical"
+                    android:text="2019/12/13"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/image1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/card1_text2"
+                    android:layout_width="300dp"
+                    android:layout_height="20dp"/>
+
+                <TextView
+                    android:id="@+id/card1_text3"
+                    android:textColor="#1f1f1f"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="16dp"
+                    android:text="文理河西食堂二楼"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/card1_text2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_width="300dp"
+                    android:layout_height="20dp"/>
+
+                <TextView
+                    android:id="@+id/card1_text4"
+                    android:textColor="#1f1f1f"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="16dp"
+                    android:text="每周二上午7点，周四上午7点供应"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@id/card1_text3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+
+                <TextView
+                    android:id="@+id/card1_text5"
+                    android:textColor="#ff8f66"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="16dp"
+                    android:text="TOP1    推荐"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/card1_text4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:background="@drawable/food6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="16:9"/>
+
+                    <TextView
+                        android:id="@+id/card2_text1"
+                        android:gravity="center_vertical"
+                        android:text="越城特产桂花糕"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_width="300dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image2"
+                        app:layout_constraintLeft_toLeftOf="@id/image2" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="2019/12/13"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/image2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/card2_text2"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card2_text3"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="文理河西食堂二楼"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card2_text2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card2_text4"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="每周三下午5点，周四中午11:30点供应"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/card2_text3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card2_text5"
+                        android:textColor="#ff8f66"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="TOP2    推荐"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card2_text4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:background="@drawable/food5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="16:9"/>
+
+                    <TextView
+                        android:id="@+id/card3_text1"
+                        android:gravity="center_vertical"
+                        android:text="秘制水晶豚骨肉"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_width="300dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image3"
+                        app:layout_constraintLeft_toLeftOf="@id/image3" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="2019/12/13"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/image3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/card3_text2"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card3_text3"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="文理河西食堂一楼"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card3_text2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card3_text4"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="每周五中午11:30点，周四上午7点供应"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/card3_text3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card3_text5"
+                        android:textColor="#ff8f66"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="TOP3    推荐"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card3_text4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:background="@drawable/food4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="16:9"/>
+
+                    <TextView
+                        android:id="@+id/card4_text1"
+                        android:gravity="center_vertical"
+                        android:text="碳烤腊肠"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_width="300dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image4"
+                        app:layout_constraintLeft_toLeftOf="@id/image4" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="2019/12/13"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/image4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/card4_text2"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card4_text3"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="城南大道233号如家菜馆"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card4_text2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card4_text4"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="每周一中午11:30点，周四上午7点供应"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/card4_text3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card4_text5"
+                        android:textColor="#ff8f66"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="TOP4    推荐"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card4_text4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card5"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card4">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image5"
+                        android:background="@drawable/food3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="16:9"/>
+
+                    <TextView
+                        android:id="@+id/card5_text1"
+                        android:gravity="center_vertical"
+                        android:text="特色烤山鸭"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_width="300dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image5"
+                        app:layout_constraintLeft_toLeftOf="@id/image5" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="2019/12/13"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/image5"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/card5_text2"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card5_text3"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="环城西路508号阿甘菜馆"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card5_text2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card5_text4"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="每周四中午11:30点，周六全天供应"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/card5_text3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card5_text5"
+                        android:textColor="#ff8f66"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="TOP5    推荐"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card5_text4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card6"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card5">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image6"
+                        android:background="@drawable/food2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="16:9"/>
+
+                    <TextView
+                        android:id="@+id/card6_text1"
+                        android:gravity="center_vertical"
+                        android:text="香酥脆脆卷"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_width="300dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image6"
+                        app:layout_constraintLeft_toLeftOf="@id/image6" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="2019/12/13"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/image6"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/card6_text2"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card6_text3"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="廊桥236号大众饭店"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card6_text2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card6_text4"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="每周一中午11:30点，周日全天供应"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/card6_text3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card6_text5"
+                        android:textColor="#ff8f66"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="TOP6    推荐"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card6_text4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card7"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card6">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image7"
+                        android:background="@drawable/food1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="16:9"/>
+
+                    <TextView
+                        android:id="@+id/card7_text1"
+                        android:gravity="center_vertical"
+                        android:text="绍兴精品黄酒"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_width="300dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image7"
+                        app:layout_constraintLeft_toLeftOf="@id/image7" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="2019/12/13"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/image7"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/card7_text2"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card7_text3"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="垃圾街65号彤彤酒家"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card7_text2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card7_text4"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="每周四上午9点，周三下午8点"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/card7_text3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card7_text5"
+                        android:textColor="#ff8f66"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="TOP7    推荐"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card7_text4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.android.assistant.ui.home.ObservableScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

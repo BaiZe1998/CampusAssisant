@@ -1,15 +1,19 @@
 package com.android.assistant.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.android.assistant.FoodActivity;
 import com.android.assistant.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.youth.banner.Banner;
@@ -17,8 +21,12 @@ import com.youth.banner.Banner;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
 
+    private ImageButton imageButton1;
+    private ImageButton imageButton2;
+    private ImageButton imageButton3;
+    private ImageButton imageButton4;
     private BottomNavigationView bottomNavigationView;
     private ObservableScrollView scrollView;
     private HomeViewModel homeViewModel;
@@ -34,10 +42,26 @@ public class HomeFragment extends Fragment {
         scrollView = (ObservableScrollView) root.findViewById(R.id.scroll);
         bottomNavigationView = (BottomNavigationView)getActivity().findViewById(R.id.nav_view);
 
+
+
         initBanner(root);
 
         initMove();
         return root;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        imageButton1 = (ImageButton)getActivity().findViewById(R.id.image1);
+        imageButton2 = (ImageButton)getActivity().findViewById(R.id.image2);
+        imageButton3 = (ImageButton)getActivity().findViewById(R.id.image3);
+        imageButton4 = (ImageButton)getActivity().findViewById(R.id.image4);
+        imageButton1.setOnClickListener(this);
+        imageButton2.setOnClickListener(this);
+        imageButton3.setOnClickListener(this);
+        imageButton4.setOnClickListener(this);
+
     }
 
     public void initBanner(View root){
@@ -77,5 +101,21 @@ public class HomeFragment extends Fragment {
                 }
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.image1:
+                Intent intent = new Intent(getActivity(), FoodActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.image2:
+                break;
+            case R.id.image3:
+                break;
+            case R.id.image4:
+                break;
+        }
     }
 }
