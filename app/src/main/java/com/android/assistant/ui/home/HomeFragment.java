@@ -14,7 +14,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.android.assistant.FoodActivity;
+import com.android.assistant.OutActivity;
 import com.android.assistant.R;
+import com.android.assistant.TravelActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.youth.banner.Banner;
 
@@ -111,8 +113,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent);
                 break;
             case R.id.image2:
+                Intent intent3 = new Intent(getActivity(), TravelActivity.class);
+                startActivity(intent3);
                 break;
             case R.id.image3:
+                Intent intent1 = new Intent(getActivity(), OutActivity.class);
+                startActivity(intent1);
                 break;
             case R.id.image4:
                 break;

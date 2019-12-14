@@ -17,12 +17,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FoodActivity"
+        <activity android:name=".TravelActivity"
+            android:label="周边游"
             android:theme="@style/CollegeActivityTheme"
-            android:label="周边美食"></activity>
+            ></activity>
+        <activity
+            android:name=".OutActivity"
+            android:label="精彩活动"
+            android:theme="@style/CollegeActivityTheme" />
+        <activity
+            android:name=".FoodActivity"
+            android:label="周边美食"
+            android:theme="@style/CollegeActivityTheme" />
         <activity
             android:name=".CollegeActivity"
-            android:theme="@style/CollegeActivityTheme2"></activity>
+            android:theme="@style/CollegeActivityTheme2" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

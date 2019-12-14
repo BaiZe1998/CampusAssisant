@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OutActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <com.android.assistant.ui.home.ObservableScrollView
+        android:id="@+id/scroll"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:background="@drawable/activity1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="16:9"/>
+
+                    <TextView
+                        android:id="@+id/card1_text1"
+                        android:gravity="center_vertical"
+                        android:text="万人越城马拉松"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_width="300dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image1"
+                        app:layout_constraintLeft_toLeftOf="@id/image1" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="2019/10/13"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/image1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/card1_text2"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card1_text3"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="绍兴市越城区"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card1_text2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card1_text4"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="2013/12/13上午9点-下午3点"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/card1_text3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card1_text5"
+                        android:textColor="#ff8f66"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="TOP1    推荐"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card1_text4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:background="@drawable/activity2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="16:9"/>
+
+                    <TextView
+                        android:id="@+id/card2_text1"
+                        android:gravity="center_vertical"
+                        android:text="龙舟世锦赛"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_width="300dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image2"
+                        app:layout_constraintLeft_toLeftOf="@id/image2" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="2019/6/13"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/image2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/card2_text2"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card2_text3"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="越城区风则江"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card2_text2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card2_text4"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="2019/6/13下午2点开始"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/card2_text3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card2_text5"
+                        android:textColor="#ff8f66"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="TOP2    推荐"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card2_text4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:background="@drawable/activity3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="16:9"/>
+
+                    <TextView
+                        android:id="@+id/card3_text1"
+                        android:gravity="center_vertical"
+                        android:text="师范学子支援山区"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_width="300dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image3"
+                        app:layout_constraintLeft_toLeftOf="@id/image3" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="2019/8/13"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/image3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/card3_text2"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card3_text3"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="文理南山校区综合楼"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card3_text2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card3_text4"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="维持两个礼拜的报名时间，忘大家踊跃尝试"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/card3_text3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card3_text5"
+                        android:textColor="#ff8f66"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="TOP3    推荐"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card3_text4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:background="@drawable/activity4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="16:9"/>
+
+                    <TextView
+                        android:id="@+id/card4_text1"
+                        android:gravity="center_vertical"
+                        android:text="模拟联合国论坛"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_width="300dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image4"
+                        app:layout_constraintLeft_toLeftOf="@id/image4" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="2019/11/13"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/image4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/card4_text2"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card4_text3"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="文理河西校区科技馆会议室"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card4_text2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card4_text4"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="参与成员模拟联合国的事务往来，与经济交易"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/card4_text3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card4_text5"
+                        android:textColor="#ff8f66"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="TOP4    推荐"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card4_text4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card5"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card4">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image5"
+                        android:background="@drawable/activity5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="16:9"/>
+
+                    <TextView
+                        android:id="@+id/card5_text1"
+                        android:gravity="center_vertical"
+                        android:text="塔山徒步行"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_width="300dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image5"
+                        app:layout_constraintLeft_toLeftOf="@id/image5" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="2019/12/13"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/image5"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/card5_text2"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card5_text3"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="环城西路245号塔山公园"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card5_text2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card5_text4"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="由学校野外求生俱乐部举办的远足交流活动"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/card5_text3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card5_text5"
+                        android:textColor="#ff8f66"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="TOP5    推荐"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card5_text4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card6"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card5">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image6"
+                        android:background="@drawable/activity6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="16:9"/>
+
+                    <TextView
+                        android:id="@+id/card6_text1"
+                        android:gravity="center_vertical"
+                        android:text="农家乐"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_width="300dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image6"
+                        app:layout_constraintLeft_toLeftOf="@id/image6" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="2019/3/13"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/image6"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/card6_text2"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card6_text3"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="二龙山温泉公园"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card6_text2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card6_text4"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="由学校户外求生俱乐部联合举办的体验之旅"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/card6_text3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card6_text5"
+                        android:textColor="#ff8f66"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="TOP6    推荐"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card6_text4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card7"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card6">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image7"
+                        android:background="@drawable/activity7"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="16:9"/>
+
+                    <TextView
+                        android:id="@+id/card7_text1"
+                        android:gravity="center_vertical"
+                        android:text="志愿汇大集合"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_width="300dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image7"
+                        app:layout_constraintLeft_toLeftOf="@id/image7" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="2019/12/13"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/image7"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/card7_text2"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card7_text3"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="五四广场"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card7_text2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card7_text4"
+                        android:textColor="#1f1f1f"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="由学校学生会和校青协联合举办的大型志愿者活动"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/card7_text3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/card7_text5"
+                        android:textColor="#ff8f66"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="TOP7    推荐"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/card7_text4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.android.assistant.ui.home.ObservableScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
