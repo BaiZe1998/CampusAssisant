@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.android.assistant.FlashActivity;
 import com.android.assistant.FoodActivity;
 import com.android.assistant.OutActivity;
 import com.android.assistant.R;
@@ -121,6 +122,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent1);
                 break;
             case R.id.image4:
+                Intent intent4 = new Intent(getActivity(), FlashActivity.class);
+                startActivity(intent4);
                 break;
         }
     }

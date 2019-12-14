@@ -17,10 +17,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TravelActivity"
-            android:label="周边游"
+        <activity android:name=".FlashActivity"
+            android:label="闪光墙"
             android:theme="@style/CollegeActivityTheme"
             ></activity>
+        <activity
+            android:name=".TravelActivity"
+            android:label="周边游"
+            android:theme="@style/CollegeActivityTheme" />
         <activity
             android:name=".OutActivity"
             android:label="精彩活动"

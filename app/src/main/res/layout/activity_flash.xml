@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlashActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <com.android.assistant.ui.home.ObservableScrollView
+        android:id="@+id/scroll"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/card1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                android:layout_width="0dp"
+                android:layout_height="160dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:background="@drawable/flash1"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"/>
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:text="计科171李小白"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/image1"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"/>
+
+                    <TextView
+                        android:text="李小白同学在校的三年时间，积极参与学校的各种信息学竞赛项目，并组织建立的李小白工作室，拉动同学创业与学习积极性"
+                        android:textColor="#fff"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text1"
+                        app:layout_constraintRight_toLeftOf="@+id/image1"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/card2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card1"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                android:layout_width="0dp"
+                android:layout_height="160dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#0d5282"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:background="@drawable/flash2"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"/>
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:text="计科172貂小蝉"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/image2"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"/>
+
+                    <TextView
+                        android:text="貂小蝉同学在校的三年时间，积极参与学校的各种信息学竞赛项目，并组织建立的李小白工作室，拉动同学创业与学习积极性"
+                        android:textColor="#fff"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text2"
+                        app:layout_constraintRight_toLeftOf="@+id/image2"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/card3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card2"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                android:layout_width="0dp"
+                android:layout_height="160dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:background="@drawable/flash3"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"/>
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:text="财管171孙小香"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/image3"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"/>
+
+                    <TextView
+                        android:text="孙小香同学在校的三年时间，积极参与学校的各种信息学竞赛项目，并组织建立的李小白工作室，拉动同学创业与学习积极性"
+                        android:textColor="#fff"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text3"
+                        app:layout_constraintRight_toLeftOf="@+id/image3"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/card4"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card3"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                android:layout_width="0dp"
+                android:layout_height="160dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#0d5282"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:background="@drawable/flash4"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"/>
+
+                    <TextView
+                        android:id="@+id/text4"
+                        android:text="经济161花小兰"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/image4"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"/>
+
+                    <TextView
+                        android:text="花小兰同学在校的三年时间，积极参与学校的各种信息学竞赛项目，并组织建立的李小白工作室，拉动同学创业与学习积极性"
+                        android:textColor="#fff"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text4"
+                        app:layout_constraintRight_toLeftOf="@+id/image4"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/card5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card4"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                android:layout_width="0dp"
+                android:layout_height="160dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/image5"
+                        android:background="@drawable/flash5"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"/>
+
+                    <TextView
+                        android:id="@+id/text5"
+                        android:text="物理162兰小凌"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/image5"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"/>
+
+                    <TextView
+                        android:text="兰小凌同学在校的三年时间，积极参与学校的各种信息学竞赛项目，并组织建立的李小白工作室，拉动同学创业与学习积极性"
+                        android:textColor="#fff"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text5"
+                        app:layout_constraintRight_toLeftOf="@+id/image5"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/card6"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card5"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                android:layout_width="0dp"
+                android:layout_height="160dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#0d5282"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/image6"
+                        android:background="@drawable/flash6"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"/>
+
+                    <TextView
+                        android:id="@+id/text6"
+                        android:text="机械162诸小葛"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/image6"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"/>
+
+                    <TextView
+                        android:text="诸小葛同学在校的三年时间，积极参与学校的各种信息学竞赛项目，并组织建立的李小白工作室，拉动同学创业与学习积极性"
+                        android:textColor="#fff"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text6"
+                        app:layout_constraintRight_toLeftOf="@+id/image6"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/card7"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card6"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp"
+                android:layout_width="0dp"
+                android:layout_height="160dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/image7"
+                        android:background="@drawable/flash7"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"/>
+
+                    <TextView
+                        android:id="@+id/text7"
+                        android:text="通信171李小芳"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/image7"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"/>
+
+                    <TextView
+                        android:text="李小芳同学在校的三年时间，积极参与学校的各种信息学竞赛项目，并组织建立的李小白工作室，拉动同学创业与学习积极性"
+                        android:textColor="#fff"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text7"
+                        app:layout_constraintRight_toLeftOf="@+id/image7"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.android.assistant.ui.home.ObservableScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
